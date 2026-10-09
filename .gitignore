@@ -1,0 +1,11 @@
+# systémové soubory macOS
+.DS_Store
+
+# originální fotky – web používá jen upravené verze v Obrazky/web a loga v Obrazky/Logo
+/Obrazky/*
+!/Obrazky/web/
+!/Obrazky/Logo/
+
+# interní podklady (zadání a deník úprav) – nejsou součástí webu
+/instrukce.md
+/stav.md
