@@ -10,6 +10,19 @@
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Hero na mobilu: pevná výška ----------
+     Výška obrazovky se změří jednou a uloží do --hero-h. Při scrollu se na telefonu schovává lišta prohlížeče
+     a okno se zvětší – hero se tím ale už nepřepočítá ani neposkočí. Nově se měří jen při změně šířky (otočení telefonu). */
+  const setHeroHeight = () => document.documentElement.style.setProperty('--hero-h', window.innerHeight + 'px');
+  let heroWidth = window.innerWidth;
+  setHeroHeight();
+  const onResize = () => {
+    if (window.innerWidth !== heroWidth) { heroWidth = window.innerWidth; setHeroHeight(); }
+  };
+  window.addEventListener('resize', onResize);
+  window.addEventListener('orientationchange', () => setTimeout(onResize, 300));
+  if ('ResizeObserver' in window) new ResizeObserver(onResize).observe(document.documentElement);
+
   /* ---------- Navigace: stín při posunu, hamburger menu, aktivní odkaz ---------- */
   const navbar = document.getElementById('navbar');
   const toggle = navbar && navbar.querySelector('.navbar__toggle');

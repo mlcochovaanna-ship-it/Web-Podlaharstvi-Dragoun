@@ -580,10 +580,9 @@ p + p { margin-top: var(--space-4); }
 .hero__lead { margin-top: var(--space-5); max-width: 34rem; font-size: max(1rem, calc(1.3125rem * var(--fs-scale))); color: var(--color-on-dark); }   /* 21px – o stupeň větší než ostatní perexy */
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--space-4); margin-top: var(--space-6); }
 @media (max-width: 39.99em) {
-  .hero__actions .btn { flex: 1 1 100%; }   /* mobil: obě tlačítka pod sebou ve stejné šířce */
   /* mobil: hero na celou výšku obrazovky včetně místa pod lištami prohlížeče (100lvh) – dole neprosvítá proužek další sekce,
      ani když prohlížeč lištu schová nebo ji má průhlednou přes stránku; 100vh je záloha pro starší prohlížeče */
-  .hero { min-height: calc(100vh + 2px); min-height: calc(100lvh + 2px); }   /* +2 px: telefon počítá výšku na zlomky pixelu – bez rezervy u spodního okraje prosvítala tenká světlá linka */
+  .hero { min-height: calc(100vh + 2px); min-height: calc(var(--hero-h, 100lvh) + 2px); }   /* --hero-h nastaví script.js jednou při načtení (px) – při scrollu se výška nemění */   /* +2 px: telefon počítá výšku na zlomky pixelu – bez rezervy u spodního okraje prosvítala tenká světlá linka */
   .hero__content { padding-block: calc(var(--header-height) + var(--space-6)) var(--space-7); }
 }
 .hero__media { position: absolute; inset: 0; }
@@ -592,7 +591,7 @@ p + p { margin-top: var(--space-4); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 92% 100%;   /* mobil: pravá část fotky – podlaha se slunečními pruhy bez barových židlí */
+  object-position: 85% 100%;   /* mobil: zarovnáno ke spodnímu okraji (celá podlaha), vodorovně pravá část se slunečními pruhy bez barových židlí */
 }
 /* mobil: tmavý přechod shora – text nahoře, podlaha dole zůstává vidět */
 .hero__media::before {
@@ -601,10 +600,10 @@ p + p { margin-top: var(--space-4); }
   inset: 0;
   z-index: 1;
   background: linear-gradient(to bottom,
-    rgba(36, 26, 20, 0.94) 0%,
-    rgba(36, 26, 20, 0.88) 45%,
-    rgba(36, 26, 20, 0.6) 75%,
-    rgba(36, 26, 20, 0.4) 100%);
+    rgba(36, 26, 20, 0.92) 0%,
+    rgba(36, 26, 20, 0.8) 40%,
+    rgba(36, 26, 20, 0.45) 65%,
+    rgba(36, 26, 20, 0.12) 100%);   /* nahoře pod textem tmavé, dolů ke světlé podlaze se zesvětluje */
   pointer-events: none;
 }
 
