@@ -223,6 +223,20 @@ p + p { margin-top: var(--space-4); }
   background-size: cover;
   background-position: center top;   /* nahoře podlaha ubíhá ke světlu od okna */
 }
+/* mobil a tablet: vlastní výřez fotky (širší pohled na několik prken se sluneční skvrnou, 083347-podlaha-mobil),
+   ve dvojnásobné šířce ukotvený dole; nad ním plná tmavá barva, světlejší přechod než na desktopu */
+@media (max-width: 63.99em) {
+  .section--reveal-floor {
+    background-image: linear-gradient(180deg, rgba(36, 26, 20, 0.9) 0%, rgba(36, 26, 20, 0.72) 40%, rgba(36, 26, 20, 0.5) 100%), url('Obrazky/web/RD Velky Tynec/20250205_083347-podlaha-mobil-1200.jpg');
+    background-image: linear-gradient(180deg, rgba(36, 26, 20, 0.9) 0%, rgba(36, 26, 20, 0.72) 40%, rgba(36, 26, 20, 0.5) 100%), image-set(url('Obrazky/web/RD Velky Tynec/20250205_083347-podlaha-mobil-1200.avif') type('image/avif'), url('Obrazky/web/RD Velky Tynec/20250205_083347-podlaha-mobil-1200.jpg') type('image/jpeg'));
+    background-size: 100% 100%, 200% auto;
+    background-position: 0 0, center bottom;
+    background-repeat: no-repeat;
+  }
+  /* světlejší pozadí → doplňkové texty krémově místo utlumené béžové, aby kontrast zůstal ≥ 4,5 : 1 (nejhorší místo 4,7 : 1) */
+  .section--reveal-floor .section__intro,
+  .section--reveal-floor .step__text { color: var(--color-on-dark); }
+}
 /* obsah sekce na 2/3 šířky, ukotvený vlevo */
 .section__narrow { max-width: 100%; }
 
@@ -600,10 +614,10 @@ p + p { margin-top: var(--space-4); }
   inset: 0;
   z-index: 1;
   background: linear-gradient(to bottom,
-    rgba(36, 26, 20, 0.92) 0%,
-    rgba(36, 26, 20, 0.8) 40%,
-    rgba(36, 26, 20, 0.45) 65%,
-    rgba(36, 26, 20, 0.12) 100%);   /* nahoře pod textem tmavé, dolů ke světlé podlaze se zesvětluje */
+    rgba(36, 26, 20, 0.96) 0%,
+    rgba(36, 26, 20, 0.9) 45%,
+    rgba(36, 26, 20, 0.55) 72%,
+    rgba(36, 26, 20, 0.05) 100%);   /* nahoře pod textem tmavé, až úplně dole je podlaha dobře vidět */
   pointer-events: none;
 }
 
@@ -1365,19 +1379,21 @@ textarea.form__control { min-height: 5.5rem; padding-block: var(--space-2); resi
   .footer { padding-top: var(--space-9); }
 }
 
-/* Error page – 404 */
+/* Error page – 404 (vzor: web Raška – plná lišta, ikona místo čísla, patička) */
 .error-page {
-  min-height: calc(100svh - var(--header-height));
   display: grid;
   place-items: center;
-  padding-block: var(--space-9);
+  padding-block: 5rem;
   text-align: center;
 }
-.error-page__inner { display: grid; justify-items: center; gap: var(--space-5); max-width: 36rem; }
-.error-page__icon { font-size: 4.5rem; color: var(--color-dark); }
-.error-page__code { font-family: var(--font-display); font-size: var(--fs-h2); font-weight: var(--fw-display); -webkit-text-stroke: var(--display-stroke) currentColor; color: var(--color-accent-dark); line-height: 1; }
-.error-page__title { font-size: var(--fs-h2); }
-.error-page__text { color: var(--color-muted); font-size: var(--fs-lead); }
+.error-page__inner { display: grid; justify-items: center; gap: var(--space-5); max-width: 38rem; }
+.error-page__icon { width: 9.5rem; height: auto; }
+.error-page__title { font-size: var(--fs-h2); -webkit-text-stroke-width: 0.075em; }   /* o něco silnější než běžné H1 (0.05em) */
+.error-page__text { color: var(--color-muted); font-size: var(--fs-base); margin-bottom: var(--space-3); }
+@media (min-width: 64em) {
+  .error-page { padding-block: 7rem; }
+  .error-page__icon { width: 11.5rem; }
+}
 .navbar--simple .navbar__inner { justify-content: space-between; }
 
 /* 7. Utility a pohybové efekty ------------------------------------------- */

@@ -55,7 +55,9 @@
   if ('IntersectionObserver' in window && navLinks.length) {
     const map = new Map();
     navLinks.forEach((link) => {
-      const section = document.querySelector(link.getAttribute('href'));
+      const href = link.getAttribute('href');
+      if (!href.startsWith('#')) return;   // 404 odkazuje na sekce úvodní stránky („/#sluzby“)
+      const section = document.querySelector(href);
       if (section) map.set(section, link);
     });
     const spy = new IntersectionObserver((entries) => {

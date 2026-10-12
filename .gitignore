@@ -5,6 +5,8 @@
 /Obrazky/*
 !/Obrazky/web/
 !/Obrazky/Logo/
+# zdrojová loga od grafika – web je nepoužívá (používá logo-dragoun*.svg), zůstávají jen v počítači
+/Obrazky/Logo/podlahy logo 2026.*
 
 # interní podklady (zadání a deník úprav) – nejsou součástí webu
 /instrukce.md

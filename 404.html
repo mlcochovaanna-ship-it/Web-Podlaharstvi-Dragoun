@@ -9,26 +9,90 @@
   <!-- Absolutní cesty: stránka se zobrazuje na libovolné neexistující adrese -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/style.css?v=0-3">
+  <script src="/script.js?v=0-3" defer></script>
 </head>
+
 <body>
-  <header class="navbar navbar--simple">
+  <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
+  <!-- ===== Navigace – stejná jako na úvodní stránce, odkazy vedou na její sekce ===== -->
+  <header class="navbar navbar--simple" id="navbar">
     <div class="container navbar__inner">
       <a class="navbar__logo" href="/" aria-label="Podlahářství Dragoun – úvodní stránka">
         <img src="/Obrazky/Logo/logo-dragoun-bile.svg" alt="Podlahářství Dragoun" width="542" height="92">
       </a>
-      <a class="btn" href="/#kontakt">Poptat podlahu</a>
+
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu"
+        aria-label="Otevřít menu">
+        <span class="navbar__toggle-bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="navbar__menu" id="hlavni-menu" aria-label="Hlavní navigace">
+        <ul class="navbar__list">
+          <li><a class="navbar__link" href="/#sluzby">Služby</a></li>
+          <li><a class="navbar__link" href="/#realizace">Realizace</a></li>
+          <li><a class="navbar__link" href="/#o-nas">O&nbsp;nás</a></li>
+          <li><a class="navbar__link" href="/#caste-dotazy">Časté dotazy</a></li>
+          <li><a class="navbar__link" href="/#kontakt">Kontakt</a></li>
+        </ul>
+        <a class="btn navbar__cta" href="/#kontakt">Poptat podlahu</a>
+      </nav>
     </div>
   </header>
 
-  <main class="error-page">
+  <main id="obsah" class="error-page">
     <div class="container error-page__inner">
-      <span class="icon error-page__icon" aria-hidden="true"><i class="fa-regular fa-face-frown"></i></span>
-      <p class="error-page__code">404</p>
-      <h1 class="error-page__title">Tuto stránku jsme nenašli</h1>
-      <p class="error-page__text">Odkaz je možná neplatný nebo stránka už neexistuje. Pokračujte prosím na úvod webu.</p>
+      <picture>
+        <source type="image/avif" srcset="/Obrazky/web/ilustrace/prkno-icon.avif">
+        <img class="error-page__icon" src="/Obrazky/web/ilustrace/prkno-icon.png" width="560" height="256" alt="">
+      </picture>
+      <h1 class="error-page__title">Stránka nenalezena</h1>
+      <p class="error-page__text">Omlouváme se, požadovaná stránka neexistuje nebo byla přesunuta.<br>
+        Vraťte se na úvodní stránku.</p>
       <a class="btn btn--lg" href="/">Zpět na úvod</a>
     </div>
   </main>
+
+  <!-- ===== Patička – stejná jako na úvodní stránce ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <a class="footer__logo" href="/" aria-label="Podlahářství Dragoun – úvodní stránka">
+          <img src="/Obrazky/Logo/logo-dragoun-bile-komplet.svg"
+            alt="Podlahářství Dragoun – rodinné řemeslo od roku 1997" width="541" height="154" loading="lazy">
+        </a>
+
+        <ul class="footer__contacts" role="list" aria-label="Kontakt">
+          <li><a class="footer__contact" href="tel:+420732626656"><span class="icon" aria-hidden="true"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+                  stroke-linejoin="round" focusable="false">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg></span><span class="visually-hidden">Telefon: </span>+420&nbsp;732&nbsp;626&nbsp;656</a></li>
+          <li><a class="footer__contact" href="mailto:info@podlaharstvi-dragoun.cz"><span class="icon"
+                aria-hidden="true"><i class="fa-regular fa-envelope"></i></span><span class="visually-hidden">E-mail:
+              </span>info@podlaharstvi-dragoun.cz</a></li>
+        </ul>
+
+        <address class="footer__company">
+          <span class="footer__company-name">Milan Dragoun</span><br>
+          K&nbsp;Baběnci 764, 783&nbsp;44 Náměšť na&nbsp;Hané<br>
+          IČO: 74797603 <span class="footer__sep" aria-hidden="true">·</span> DIČ: CZ7705235318
+          <span class="footer__note">Fyzická osoba zapsaná v&nbsp;živnostenském rejstříku
+            od&nbsp;19.&nbsp;7.&nbsp;2010.</span>
+        </address>
+      </div>
+
+      <p class="footer__claim">Děláme pro vás <span class="footer__accent">podlahy</span> už 30&nbsp;let.</p>
+
+      <div class="footer__bottom">
+        <p>Copyright ©&nbsp;2026 Podlahářství Dragoun. Webdesign <a href="https://harmonickyweb.cz/" target="_blank"
+            rel="noopener">harmonickyweb.cz<span class="visually-hidden"> (otevře se v&nbsp;novém okně)</span></a></p>
+        <a class="footer__top" href="#navbar" aria-label="Zpět na začátek stránky"><span class="chevron chevron--up"
+            aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
