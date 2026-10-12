@@ -137,7 +137,9 @@
   const dialog = document.getElementById('lightbox');
   if (dialog && typeof dialog.showModal === 'function') {
     const picture = dialog.querySelector('[data-lightbox-picture]');
-    const source = picture.querySelector('source');
+    const source = document.createElement('source');
+    source.type = 'image/avif';
+    picture.prepend(source);
     const img = picture.querySelector('img');
     const caption = dialog.querySelector('[data-lightbox-caption]');
     const counter = dialog.querySelector('[data-lightbox-counter]');

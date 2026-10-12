@@ -26,6 +26,7 @@
 /* 2. Design tokeny -------------------------------------------------------- */
 :root {
   /* Barvy značky */
+  --color-primary: #241a14;        /* primární tmavě hnědá – navigace, hero, tmavé sekce, patička */
   --color-secondary: #f1e8da;      /* béžová – oddělení světlých sekcí, podklady */
   --color-background: #faf6ef;     /* teplá krémová – hlavní pozadí */
   --color-surface: #fffdf9;        /* světlé karty */
@@ -36,7 +37,7 @@
   --color-on-dark: #f6efe3;        /* text na tmavé hnědé */
   --color-on-dark-muted: #d9cbb6;
   --color-border: #e2d5c1;
-  --color-dark: #241a14;           /* jediná tmavá hnědá – navigace, hero, tmavé sekce, patička */
+  --color-dark: var(--color-primary);   /* alias primární barvy – používá se napříč komponentami */
   --color-border-dark: rgba(246, 239, 227, 0.16);
   --color-success: #2f6b3a;
   --color-error: #b81b20;
@@ -552,6 +553,12 @@ p + p { margin-top: var(--space-4); }
   .navbar__menu, .navbar__menu:not(.is-open) { gap: var(--space-5); }
   .navbar__list { gap: var(--space-5); }
 }
+/* tablet na šířku a nejmenší notebooky (1024–1151 px) – menší logo a mezery, aby se tlačítko vešlo do šířky obsahu */
+@media (min-width: 64em) and (max-width: 71.99em) {
+  .navbar__logo img { height: 2.5rem; }
+  .navbar__menu, .navbar__menu:not(.is-open) { gap: var(--space-5); }
+  .navbar__list { gap: var(--space-3); }
+}
 
 /* Hero – fotografie přes celou šířku, text vlevo na tmavém přechodu */
 .hero {
@@ -932,7 +939,6 @@ p + p { margin-top: var(--space-4); }
   /* stejná mezera (32 px) na obou stranách každé linky */
   .project-info__list { column-gap: var(--space-6); padding-left: var(--space-6); border-left: 1px solid var(--color-border); }
 }
-}
 @media (min-width: 40em) {
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .gallery__cell--featured { grid-column: span 2; }
@@ -1191,11 +1197,12 @@ p + p { margin-top: var(--space-4); }
   }
 }
 @media (min-width: 48em) and (max-width: 63.99em) {
-  .section--dark .contact-list { grid-template-columns: repeat(2, max-content); column-gap: var(--space-8); }
+  /* telefon a e-mail vedle sebe, jen když se vejdou – jinak se e-mail zalomí pod telefon (dlouhá adresa v Michromě) */
+  .section--dark .contact-list { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-8); }
 }
 
 /* Contact – rozložení sekce: vlevo nadpis, úvod a kontakty, vpravo formulář */
-.contact { display: grid; gap: var(--space-8); }
+.contact { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-8); }
 @media (min-width: 64em) {
   /* oba sloupce stejně vysoké: nahoře nadpis × první řada polí, dole kontakty × řádek s tlačítkem */
   .contact { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--space-9); align-items: stretch; }

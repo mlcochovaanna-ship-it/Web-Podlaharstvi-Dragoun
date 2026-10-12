@@ -10,9 +10,20 @@ AddDefaultCharset UTF-8
 # --- Vlastní chybová stránka ---------------------------------------------
 ErrorDocument 404 /404.html
 
-# --- Přesměrování www → bez www (kanonická URL https://podlaharstvi-dragoun.cz/)
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # --- Přesměrování stránek původního webu (Antee, 2026) na sekce nového webu
+  # Cíl je absolutní, aby i adresa s www skončila jedním skokem. NE = znak # se nepřekóduje
+  # na %23, takže kotva funguje. QSD zahodí starý query string (?nid=…).
+  RewriteRule ^kontakt/?$ https://podlaharstvi-dragoun.cz/#kontakt [NC,NE,QSD,R=301,L]
+  RewriteRule ^poptavka/?$ https://podlaharstvi-dragoun.cz/#poptavka [NC,NE,QSD,R=301,L]
+  RewriteRule ^fotogalerie(/.*)?$ https://podlaharstvi-dragoun.cz/#realizace [NC,NE,QSD,R=301,L]
+  RewriteRule ^mapa-stranek/?$ https://podlaharstvi-dragoun.cz/ [NC,QSD,R=301,L]
+  # systémové adresy starého redakčního systému (index.php?nid=…, image.php, style.php)
+  RewriteRule ^(index|image|style)\.php$ https://podlaharstvi-dragoun.cz/ [NC,QSD,R=301,L]
+
+  # --- Přesměrování www → bez www (kanonická URL https://podlaharstvi-dragoun.cz/)
   RewriteCond %{HTTP_HOST} ^www\.podlaharstvi-dragoun\.cz$ [NC]
   RewriteRule ^(.*)$ https://podlaharstvi-dragoun.cz/$1 [R=301,L]
 </IfModule>
@@ -46,7 +57,7 @@ ServerSignature Off
 
 # --- Komprese --------------------------------------------------------------
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript application/javascript application/json application/ld+json application/xml application/manifest+json image/svg+xml
 </IfModule>
 
 # --- Cache -----------------------------------------------------------------
@@ -56,6 +67,8 @@ ServerSignature Off
   ExpiresByType text/html "access plus 0 seconds"
   ExpiresByType text/css "access plus 1 month"
   ExpiresByType application/javascript "access plus 1 month"
+  # novější Apache posílá JS jako text/javascript
+  ExpiresByType text/javascript "access plus 1 month"
   ExpiresByType image/avif "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"

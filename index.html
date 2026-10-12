@@ -38,8 +38,8 @@
     imagesrcset="Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-828.avif 828w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-1280.avif 1280w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-1920.avif 1920w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-2560.avif 2560w"
     imagesizes="100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="style.css?v=0-3">
-  <script src="script.js?v=0-3" defer></script>
+  <link rel="stylesheet" href="style.css?v=0-4">
+  <script src="script.js?v=0-4" defer></script>
 
   <!-- Strukturovaná data: LocalBusiness -->
   <script type="application/ld+json">
@@ -1485,8 +1485,8 @@
     <div class="lightbox__stage">
       <button class="lightbox__btn lightbox__btn--prev" type="button" data-lightbox-prev
         aria-label="Předchozí fotografie"><span class="chevron chevron--left" aria-hidden="true"></span></button>
+      <!-- <source> pro AVIF doplní script.js až při otevření (prázdný srcset by nebyl validní) -->
       <picture data-lightbox-picture>
-        <source type="image/avif" srcset="">
         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="">
       </picture>
       <button class="lightbox__btn lightbox__btn--next" type="button" data-lightbox-next
