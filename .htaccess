@@ -28,6 +28,17 @@ ErrorDocument 404 /404.html
   RewriteRule ^(.*)$ https://podlaharstvi-dragoun.cz/$1 [R=301,L]
 </IfModule>
 
+# --- Noindex mimo ostrou doménu ------------------------------------------
+# Testovací subdoména (a jakákoli jiná adresa) dostane X-Robots-Tag noindex.
+# Na podlaharstvi-dragoun.cz (s www i bez) se hlavička neposílá – po spuštění
+# se nic nemusí měnit.
+<IfModule mod_setenvif.c>
+  SetEnvIfNoCase Host "^(www\.)?podlaharstvi-dragoun\.cz(:[0-9]+)?$" OSTRA_DOMENA
+</IfModule>
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow" env=!OSTRA_DOMENA
+</IfModule>
+
 # --- Bezpečnostní hlavičky -----------------------------------------------
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
