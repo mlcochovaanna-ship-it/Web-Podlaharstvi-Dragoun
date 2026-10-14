@@ -501,6 +501,7 @@ p + p { margin-top: var(--space-4); }
 .navbar__link {
   display: block;
   padding: var(--space-3) 0;
+  text-align: center;              /* mobil a tablet: položky menu na střed */
   font-size: var(--fs-small);      /* 16px – minimum podle zadání */
   font-weight: var(--fw-semibold);
   text-decoration: none;
@@ -509,6 +510,19 @@ p + p { margin-top: var(--space-4); }
 }
 .navbar__link:hover, .navbar__link.is-active { color: #fff; }
 .navbar__cta { margin-top: var(--space-5); width: 100%; }
+@media (min-width: 40em) and (max-width: 63.99em) {
+  /* tablet: rozbalené menu jako užší panel u pravého okraje obrazovky (pod hamburgerem),
+     tlačítko v něm jako klasické tlačítko na středu */
+  .navbar__menu {
+    left: auto;
+    width: 24rem;
+    padding-inline: var(--space-6);
+    text-align: center;
+    border-left: 1px solid var(--color-border-dark);
+    border-bottom-left-radius: var(--radius-card);
+  }
+  .navbar__cta { width: auto; }
+}
 
 @media (min-width: 64em) {
   :root { --header-height: 5rem; }
@@ -605,6 +619,11 @@ p + p { margin-top: var(--space-4); }
      ani když prohlížeč lištu schová nebo ji má průhlednou přes stránku; 100vh je záloha pro starší prohlížeče */
   .hero { min-height: calc(100vh + 2px); min-height: calc(var(--hero-h, 100lvh) + 2px); }   /* --hero-h nastaví script.js jednou při načtení (px) – při scrollu se výška nemění */   /* +2 px: telefon počítá výšku na zlomky pixelu – bez rezervy u spodního okraje prosvítala tenká světlá linka */
   .hero__content { padding-block: calc(var(--header-height) + var(--space-6)) var(--space-7); }
+}
+@media (min-width: 40em) and (max-width: 63.99em) {
+  /* tablet: obsah svisle na střed fotky (stejný odstup nahoře i dole, nahoře je v něm i lišta) */
+  .hero { justify-content: center; }
+  .hero__content { padding-block: calc(var(--header-height) + var(--space-6)); }
 }
 .hero__media { position: absolute; inset: 0; }
 .hero__media picture { height: 100%; }
@@ -939,15 +958,9 @@ p + p { margin-top: var(--space-4); }
   /* stejná mezera (32 px) na obou stranách každé linky */
   .project-info__list { column-gap: var(--space-6); padding-left: var(--space-6); border-left: 1px solid var(--color-border); }
 }
-@media (min-width: 40em) {
-  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .gallery__cell--featured { grid-column: span 2; }
-  .gallery__cell--featured .gallery__item { aspect-ratio: 16 / 9; }
-}
 @media (min-width: 40em) and (max-width: 63.99em) {
-  /* lichý poslední náhled na tabletu vyplní celý řádek */
-  .gallery__cell:last-child:nth-child(even) { grid-column: span 2; }
-  .gallery__cell:last-child:nth-child(even) .gallery__item { aspect-ratio: 16 / 9; }
+  /* tablet: 6 stejně velkých náhledů ve dvou řadách po třech */
+  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (min-width: 64em) {
   .gallery {

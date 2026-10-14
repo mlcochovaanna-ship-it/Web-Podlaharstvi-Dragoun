@@ -38,8 +38,8 @@
     imagesrcset="Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-828.avif 828w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-1280.avif 1280w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-1920.avif 1920w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-hero-2560.avif 2560w"
     imagesizes="100vw" fetchpriority="high">
 
-  <link rel="stylesheet" href="style.css?v=0-7">
-  <script src="script.js?v=0-7" defer></script>
+  <link rel="stylesheet" href="style.css?v=0-8">
+  <script src="script.js?v=0-8" defer></script>
 
   <!-- Strukturovaná data: LocalBusiness -->
   <script type="application/ld+json">
@@ -54,6 +54,7 @@
     "image": "https://podlaharstvi-dragoun.cz/og-image.jpg",
     "telephone": "+420732626656",
     "email": "info@podlaharstvi-dragoun.cz",
+    "sameAs": ["https://www.facebook.com/podlaharstvi.dragoun"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "K Baběnci 764",
@@ -61,7 +62,12 @@
       "addressLocality": "Náměšť na Hané",
       "addressCountry": "CZ"
     },
-    "areaServed": "Olomouc a okolí",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "name": "Olomouc a okolí, zhruba do 100 km",
+      "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 49.5938, "longitude": 17.2509 },
+      "geoRadius": "100000"
+    },
     "founder": { "@type": "Person", "name": "Milan Dragoun" },
     "vatID": "CZ7705235318",
     "identifier": { "@type": "PropertyValue", "propertyID": "IČO", "value": "74797603" }
@@ -94,7 +100,7 @@
         "name": "Kde všude realizujete podlahy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Podlahy realizujeme v Olomouci a okolí. Pokud máte zakázku dál, ozvěte se nám a probereme možnosti."
+          "text": "Nejčastěji pracujeme v Olomouci a okolí, ale rádi za vámi dojedeme i dál, zhruba do 100 km od Olomouce. Určitě se nám ozvěte a domluvíme se."
         }
       },
       {
@@ -452,10 +458,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Konice/20251127_151617-640.avif 640w, Obrazky/web/RD%20Konice/20251127_151617-1280.avif 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw">
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Konice/20251127_151617-640.jpg"
                       srcset="Obrazky/web/RD%20Konice/20251127_151617-640.jpg 640w, Obrazky/web/RD%20Konice/20251127_151617-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Obývací pokoj s jídelnou">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -468,10 +474,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Konice/20251127_151558-640.avif 640w, Obrazky/web/RD%20Konice/20251127_151558-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Konice/20251127_151558-640.jpg"
                       srcset="Obrazky/web/RD%20Konice/20251127_151558-640.jpg 640w, Obrazky/web/RD%20Konice/20251127_151558-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Detail podlahy v obývacím pokoji">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -484,10 +490,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Konice/20251127_151329-640.avif 640w, Obrazky/web/RD%20Konice/20251127_151329-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Konice/20251127_151329-640.jpg"
                       srcset="Obrazky/web/RD%20Konice/20251127_151329-640.jpg 640w, Obrazky/web/RD%20Konice/20251127_151329-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Napojení podlahy na dlažbu">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -500,10 +506,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Konice/20251127_151220-640.avif 640w, Obrazky/web/RD%20Konice/20251127_151220-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Konice/20251127_151220-640.jpg"
                       srcset="Obrazky/web/RD%20Konice/20251127_151220-640.jpg 640w, Obrazky/web/RD%20Konice/20251127_151220-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Pohled do jídelny">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -516,10 +522,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Konice/20251127_151417-640.avif 640w, Obrazky/web/RD%20Konice/20251127_151417-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Konice/20251127_151417-640.jpg"
                       srcset="Obrazky/web/RD%20Konice/20251127_151417-640.jpg 640w, Obrazky/web/RD%20Konice/20251127_151417-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Pokoj s výhledem">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -532,10 +538,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Konice/20250703_110402-640.avif 640w, Obrazky/web/RD%20Konice/20250703_110402-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Konice/20250703_110402-640.jpg"
                       srcset="Obrazky/web/RD%20Konice/20250703_110402-640.jpg 640w, Obrazky/web/RD%20Konice/20250703_110402-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Nivelace podkladu před pokládkou">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -576,10 +582,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_084141-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_084141-1280.avif 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw">
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250205_084141-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_084141-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_084141-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw" width="640" height="480"
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw" width="640" height="480"
                       loading="lazy" decoding="async" alt="Jídelna">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -593,10 +599,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_091154-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_091154-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250205_091154-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_091154-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_091154-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="480"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="480"
                       loading="lazy" decoding="async" alt="Kuchyně">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -610,10 +616,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_084216-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_084216-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250205_084216-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_084216-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_084216-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="495"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="495"
                       loading="lazy" decoding="async" alt="Napojení kuchyně a jídelny">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -627,10 +633,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_084009-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_084009-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250205_084009-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_084009-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_084009-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Jídelna u okna">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -644,10 +650,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_083347-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_083347-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250205_083347-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_083347-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_083347-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Detail dřevěné podlahy">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -661,10 +667,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_083930-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250205_083930-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250205_083930-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250205_083930-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="480"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="480"
                       loading="lazy" decoding="async" alt="Kuchyňský bar">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -704,10 +710,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0004-640.avif 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0004-1280.avif 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw">
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0004-640.jpg"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0004-640.jpg 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0004-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Ložnice">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -721,10 +727,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0014-640.avif 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0014-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0014-640.jpg"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0014-640.jpg 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0014-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Obývací pokoj">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -738,10 +744,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0013-640.avif 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0013-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0013-640.jpg"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0013-640.jpg 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0013-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Pracovní kout v obývacím pokoji">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -755,10 +761,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0009-640.avif 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0009-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0009-640.jpg"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0009-640.jpg 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0009-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Napojení podlahy na dlažbu v obývacím pokoji">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -772,10 +778,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0016-640.avif 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0016-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0016-640.jpg"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0016-640.jpg 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0016-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Pokoj s východem na terasu">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -789,10 +795,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0003-640.avif 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0003-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0003-640.jpg"
                       srcset="Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0003-640.jpg 640w, Obrazky/web/RD%20Tribunj%20(Chorvatsko)/IMG-20251029-WA0003-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Dětský pokoj">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -832,10 +838,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_130840-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_130840-1280.avif 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw">
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250402_130840-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_130840-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_130840-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Obývací pokoj po nivelaci">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -849,10 +855,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_130858-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_130858-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250402_130858-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_130858-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_130858-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Pohled do obývacího pokoje">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -866,10 +872,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_131242-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_131242-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250402_131242-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_131242-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_131242-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Pokoj po nivelaci">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -883,10 +889,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_123033-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_123033-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250402_123033-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_123033-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_123033-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Vstup do pokoje">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -900,10 +906,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_123022-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_123022-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250402_123022-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_123022-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_123022-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Menší pokoj">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -917,10 +923,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_123018-640.avif 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_123018-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/RD%20Velky%20Tynec/20250402_123018-640.jpg"
                       srcset="Obrazky/web/RD%20Velky%20Tynec/20250402_123018-640.jpg 640w, Obrazky/web/RD%20Velky%20Tynec/20250402_123018-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Pokoj s balkonem">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -959,10 +965,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104148-640.avif 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104148-1280.avif 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw">
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104148-640.jpg"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104148-640.jpg 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104148-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Chodba u schodiště">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -976,10 +982,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104204-640.avif 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104204-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104204-640.jpg"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104204-640.jpg 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104204-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Chodba podél kanceláří">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -993,10 +999,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104448-640.avif 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104448-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104448-640.jpg"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104448-640.jpg 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104448-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Kancelář">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1010,10 +1016,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104554-640.avif 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104554-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104554-640.jpg"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104554-640.jpg 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104554-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Kancelář">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1027,10 +1033,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104250-640.avif 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104250-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104250-640.jpg"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104250-640.jpg 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104250-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Kuchyňka">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1044,10 +1050,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104353-640.avif 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104353-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104353-640.jpg"
                       srcset="Obrazky/web/Sidlo%20firmy%20Staves/20251209_104353-640.jpg 640w, Obrazky/web/Sidlo%20firmy%20Staves/20251209_104353-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="360"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="360"
                       loading="lazy" decoding="async" alt="Kancelář s pracovními místy">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1086,10 +1092,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/R6%20Club/2S1A6781-HDR-640.avif 640w, Obrazky/web/R6%20Club/2S1A6781-HDR-1280.avif 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw">
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/R6%20Club/2S1A6781-HDR-640.jpg"
                       srcset="Obrazky/web/R6%20Club/2S1A6781-HDR-640.jpg 640w, Obrazky/web/R6%20Club/2S1A6781-HDR-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 85vw, 85vw" width="640" height="424"
+                      sizes="(min-width: 64em) 56vw, (min-width: 40em) 28vw, 85vw" width="640" height="424"
                       loading="lazy" decoding="async" alt="Bar">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1102,10 +1108,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/R6%20Club/2S1A6735-640.avif 640w, Obrazky/web/R6%20Club/2S1A6735-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/R6%20Club/2S1A6735-640.jpg"
                       srcset="Obrazky/web/R6%20Club/2S1A6735-640.jpg 640w, Obrazky/web/R6%20Club/2S1A6735-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Bar s logem klubu">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1118,10 +1124,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/R6%20Club/2S1A6845-640.avif 640w, Obrazky/web/R6%20Club/2S1A6845-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/R6%20Club/2S1A6845-640.jpg"
                       srcset="Obrazky/web/R6%20Club/2S1A6845-640.jpg 640w, Obrazky/web/R6%20Club/2S1A6845-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Taneční parket se stolky">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1134,10 +1140,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/R6%20Club/2S1A6912-640.avif 640w, Obrazky/web/R6%20Club/2S1A6912-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/R6%20Club/2S1A6912-640.jpg"
                       srcset="Obrazky/web/R6%20Club/2S1A6912-640.jpg 640w, Obrazky/web/R6%20Club/2S1A6912-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="423"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="423"
                       loading="lazy" decoding="async" alt="Taneční prostor">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1150,10 +1156,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/R6%20Club/2S1A6833-640.avif 640w, Obrazky/web/R6%20Club/2S1A6833-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/R6%20Club/2S1A6833-640.jpg"
                       srcset="Obrazky/web/R6%20Club/2S1A6833-640.jpg 640w, Obrazky/web/R6%20Club/2S1A6833-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Klubový prostor">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1166,10 +1172,10 @@
                   <picture>
                     <source type="image/avif"
                       srcset="Obrazky/web/R6%20Club/2S1A6769-HDR-640.avif 640w, Obrazky/web/R6%20Club/2S1A6769-HDR-1280.avif 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw">
+                      sizes="(min-width: 40em) 28vw, 85vw">
                     <img src="Obrazky/web/R6%20Club/2S1A6769-HDR-640.jpg"
                       srcset="Obrazky/web/R6%20Club/2S1A6769-HDR-640.jpg 640w, Obrazky/web/R6%20Club/2S1A6769-HDR-1280.jpg 1280w"
-                      sizes="(min-width: 64em) 28vw, (min-width: 40em) 42vw, 85vw" width="640" height="427"
+                      sizes="(min-width: 40em) 28vw, 85vw" width="640" height="427"
                       loading="lazy" decoding="async" alt="Vstup do klubu">
                   </picture>
                   <span class="gallery__zoom" aria-hidden="true"><span class="icon"><i
@@ -1278,8 +1284,8 @@
               </h3>
               <div class="faq__panel" id="odpoved-3" role="region" aria-labelledby="dotaz-3">
                 <div class="faq__panel-inner">
-                  <p>Podlahy realizujeme v&nbsp;Olomouci a&nbsp;okolí. Pokud máte zakázku dál, ozvěte se nám
-                    a&nbsp;probereme možnosti.</p>
+                  <p>Nejčastěji pracujeme v&nbsp;Olomouci a&nbsp;okolí, ale rádi za vámi dojedeme i&nbsp;dál, zhruba
+                    do&nbsp;100&nbsp;km od&nbsp;Olomouce. Určitě se nám ozvěte a&nbsp;domluvíme se.</p>
                 </div>
               </div>
             </div>
@@ -1449,8 +1455,17 @@
                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                 </svg></span><span class="visually-hidden">Telefon: </span>+420&nbsp;732&nbsp;626&nbsp;656</a></li>
           <li><a class="footer__contact" href="mailto:info@podlaharstvi-dragoun.cz"><span class="icon"
-                aria-hidden="true"><i class="fa-regular fa-envelope"></i></span><span class="visually-hidden">E-mail:
-              </span>info@podlaharstvi-dragoun.cz</a></li>
+                aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+                  stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg></span><span class="visually-hidden">E-mail: </span>info@podlaharstvi-dragoun.cz</a></li>
+          <li><a class="footer__contact" href="https://www.facebook.com/podlaharstvi.dragoun" target="_blank"
+              rel="noopener"><span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                  focusable="false">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg></span>Facebook<span class="visually-hidden"> (otevře se v novém okně)</span></a></li>
         </ul>
 
         <!-- firemní údaje jako jeden blok zarovnaný vpravo -->
