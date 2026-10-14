@@ -1247,6 +1247,7 @@ p + p { margin-top: var(--space-4); }
 textarea.form__control { min-height: 5.5rem; padding-block: var(--space-2); resize: vertical; }
 .form__error { font-size: var(--fs-small); color: var(--color-error); }
 .form__error:empty { display: none; }
+.form__summary { margin-top: var(--space-4); }
 .form__consent { margin-top: var(--space-3); font-size: var(--fs-small); color: var(--color-muted); }
 .form__actions { margin-top: var(--space-4); }
 /* Form line – formulář přímo na tmavém pozadí bez panelu; pole jsou jasně čitelná vyplněná políčka

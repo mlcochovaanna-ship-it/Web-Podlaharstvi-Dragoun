@@ -210,30 +210,47 @@
 
   /* ---------- Kontaktní formulář (Formspree) ----------
      Endpoint je v index.html v atributu action formuláře #poptavka.
-     Potvrzení se zobrazí pouze po skutečně úspěšném odeslání. */
+     Potvrzení se zobrazí pouze po skutečně úspěšném odeslání. Když Formspree
+     odeslání přes fetch odmítne (např. 403 kvůli reCAPTCHA), formulář se odešle
+     běžným způsobem, ať se poptávka neztratí. */
   const form = document.getElementById('poptavka');
   if (form) {
     const submit = form.querySelector('[type="submit"]');
     const success = form.querySelector('[data-form-success]');
     const error = form.querySelector('[data-form-error]');
+    const summary = form.querySelector('[data-form-summary]');
     const messages = {
       jmeno: 'Vyplňte prosím své jméno.',
       email: 'Vyplňte prosím platný e-mail.',
       telefon: 'Vyplňte prosím telefon, alespoň 9 číslic.',
       zprava: 'Napište nám prosím zprávu.'
     };
+    const linkMessage = 'Zpráva nesmí obsahovat odkaz.';
+
+    // spam skoro vždy obsahuje odkaz; e-mailové adresy (třeba podpis) se z kontroly vyřadí
+    const hasLink = (text) => /(https?:\/\/|www\.|\b[a-z0-9-]+\.(com|net|org|cz|sk|eu|li|io|ru|info|biz|xyz|top|shop|site|online|co|de|pl|ly|me|cc|club|app)\b)/i
+      .test(text.replace(/\S+@\S+/g, ' '));
 
     const validateField = (field) => {
       const out = document.getElementById(field.id + '-chyba');
-      const valid = field.checkValidity();
+      let valid = field.checkValidity();
+      let message = messages[field.name] || '';
+      if (valid && field.hasAttribute('data-no-links') && hasLink(field.value)) {
+        valid = false;
+        message = linkMessage;
+      }
       field.setAttribute('aria-invalid', String(!valid));
-      if (out) out.textContent = valid ? '' : messages[field.name] || '';
+      if (out) out.textContent = valid ? '' : message;
       return valid;
     };
 
     form.querySelectorAll('[required]').forEach((field) => {
       field.addEventListener('blur', () => { if (field.value) validateField(field); });
-      field.addEventListener('input', () => { if (field.getAttribute('aria-invalid') === 'true') validateField(field); });
+      field.addEventListener('input', () => {
+        if (field.getAttribute('aria-invalid') !== 'true') return;
+        validateField(field);
+        if (!form.querySelector('[aria-invalid="true"]')) summary.textContent = '';
+      });
     });
 
     const setSending = (sending) => {
@@ -249,7 +266,12 @@
 
       const required = Array.from(form.querySelectorAll('[required]'));
       const invalid = required.filter((field) => !validateField(field));
-      if (invalid.length) { invalid[0].focus(); return; }
+      if (invalid.length) {
+        summary.textContent = 'Formulář není kompletní. Zkontrolujte prosím označená pole.';
+        invalid[0].focus();
+        return;
+      }
+      summary.textContent = '';
 
       const endpoint = form.getAttribute('action') || '';
       if (endpoint.includes('ZDE_DOPLNIT')) {
@@ -266,7 +288,11 @@
           body: new FormData(form),
           headers: { Accept: 'application/json' }
         });
-        if (!response.ok) throw new Error('HTTP ' + response.status);
+        if (!response.ok) {
+          console.warn('Formspree odmítl odeslání přes fetch, HTTP', response.status);
+          form.submit();   // záložní běžné odeslání
+          return;
+        }
         form.reset();
         form.querySelectorAll('[aria-invalid]').forEach((f) => f.removeAttribute('aria-invalid'));
         success.hidden = false;
