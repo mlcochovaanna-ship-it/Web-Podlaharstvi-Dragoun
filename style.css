@@ -714,7 +714,7 @@ p + p { margin-top: var(--space-4); }
 .card__media--drevo-velky-tynec img { object-position: 50% 50%; }   /* detail dřevěné podlahy z realizace Velký Týnec (20250205_083930) */
 .card__media--laminat img { object-position: 25% 70%; }              /* spodní konce prken se zámky */
 .card__media--priprava-podkladu img { object-position: 35% 45%; }    /* vlna stěrky */
-.card__media--odstraneni-krytiny img { object-position: 0% 100%; }   /* zrcadlově; spodní část – podklad, střepy a špachtle, co nejméně dlaždic */
+.card__media--odstraneni-krytiny img { object-position: 50% 100%; }  /* výřez z dolní části ilustrace (zrcadlově) – střepy, špachtle a podklad; růžky dlaždic nahoře ořízne karta */
 .card__body { flex: 1; display: flex; flex-direction: column; gap: var(--space-4); padding: var(--space-4) var(--space-6) var(--space-6); }   /* menší horní odsazení – oblouk sám vytváří vzduch nad nadpisem */
 /* tělo karty o 2 px přesahuje přes spodek fotky – při animaci (posun karty o zlomky pixelu) jinak mezi obloukem a tělem probleskne tenký šev */
 .card__body { position: relative; z-index: 1; margin-top: -2px; background: var(--color-surface); }
