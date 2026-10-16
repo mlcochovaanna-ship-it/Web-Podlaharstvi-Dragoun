@@ -19,9 +19,10 @@ ErrorDocument 404 /404.html
   RewriteRule ^kontakt/?$ https://podlaharstvi-dragoun.cz/#kontakt [NC,NE,QSD,R=301,L]
   RewriteRule ^poptavka/?$ https://podlaharstvi-dragoun.cz/#poptavka [NC,NE,QSD,R=301,L]
   RewriteRule ^fotogalerie(/.*)?$ https://podlaharstvi-dragoun.cz/#realizace [NC,NE,QSD,R=301,L]
+  RewriteRule ^reference/?$ https://podlaharstvi-dragoun.cz/#realizace [NC,NE,QSD,R=301,L]
   RewriteRule ^mapa-stranek/?$ https://podlaharstvi-dragoun.cz/ [NC,QSD,R=301,L]
-  # systémové adresy starého redakčního systému (index.php?nid=…, image.php, style.php)
-  RewriteRule ^(index|image|style)\.php$ https://podlaharstvi-dragoun.cz/ [NC,QSD,R=301,L]
+  # systémové adresy starého redakčního systému (index.php?nid=…, image.php, file.php, style.php)
+  RewriteRule ^(index|image|file|style)\.php$ https://podlaharstvi-dragoun.cz/ [NC,QSD,R=301,L]
 
   # --- Přesměrování www → bez www (kanonická URL https://podlaharstvi-dragoun.cz/)
   RewriteCond %{HTTP_HOST} ^www\.podlaharstvi-dragoun\.cz$ [NC]
