@@ -1377,6 +1377,14 @@ textarea.form__control { min-height: 5.5rem; padding-block: var(--space-2); resi
   .footer__main { justify-items: center; text-align: center; }
   .footer__logo { justify-self: center; }
   .footer__contacts { justify-items: center; }
+  /* kontakty, firemní údaje i zalomené motto se stejným rozestupem řádků 30 px */
+  .footer__contacts { gap: 0; }
+  .footer .footer__contact, .footer .footer__company, .footer .footer__claim { line-height: 1.875rem; }
+}
+/* nejužší telefony: DIČ se nevejde vedle IČO – dá se na vlastní řádek a tečka mezi nimi zmizí */
+@media (max-width: 22.49em) {
+  .footer__company .footer__sep { display: none; }
+  .footer__dic { display: block; }
 }
 @media (min-width: 64em) {
   /* tři části: logo vlevo, kontakt přesně uprostřed, údaje vpravo; svisle na střed */
