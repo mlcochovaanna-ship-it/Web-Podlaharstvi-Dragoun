@@ -253,6 +253,21 @@
       });
     });
 
+    /* desktop: levý sloupec s kontakty drží výšku formuláře BEZ hlášek – chybové hlášky ani potvrzení
+       telefon a e-mail neposouvají, mezera vznikne až pod nimi. Měří se jen, když formulář nic nehlásí;
+       offsetHeight (ne getBoundingClientRect), aby výšku nezkreslil posun animace .reveal. */
+    const contact = form.closest('.contact');
+    const hasMessages = () => !success.hidden || !error.hidden ||
+      Array.from(form.querySelectorAll('.form__error')).some((p) => p.textContent);
+    const syncContactHeight = () => {
+      if (!contact || hasMessages()) return;
+      const height = form.offsetHeight + parseFloat(getComputedStyle(form).marginTop);
+      contact.style.setProperty('--contact-info-height', Math.ceil(height) + 'px');
+      contact.classList.add('contact--fixed-info');
+    };
+    syncContactHeight();
+    if ('ResizeObserver' in window) new ResizeObserver(syncContactHeight).observe(form);
+
     const setSending = (sending) => {
       submit.disabled = sending;
       submit.setAttribute('aria-busy', String(sending));
